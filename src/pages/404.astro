@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro'; // Ajusta la ruta a tu Layout.astro si es diferente
+---
+
+<Layout title="404 - Página No Encontrada">
+    <main class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
+        
+        <div class="max-w-md p-8 bg-white rounded-xl shadow-2xl border border-gray-100">
+            
+            <h1 class="text-7xl font-extrabold text-indigo-600 mb-4">404</h1>
+            
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">¡Página No Encontrada!</h2>
+            
+            <p class="text-lg text-gray-600 mb-8">
+                Lo sentimos, la ruta a la que intentas acceder no existe. Puede que el enlace esté roto o que la página haya sido eliminada.
+            </p>
+            
+            <a 
+                href="/" 
+                class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50"
+            >
+                Volver a la Página de Inicio
+            </a>
+            
+        </div>
+
+    </main>
+</Layout>

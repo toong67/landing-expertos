@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Dra. Carla Méndez",
+        "role": "Médico General",
+        "photoUrl": "https://i.pravatar.cc/300?img=5",
+        "whatsappNumber": "15554567555",
+        "services": [
+            "Consultas médicas generales",
+            "Control de hipertensión arterial",
+            "Certificados médicos viales",
+            "Suturas de heridas menores",
+            "Lavado de oídos",
+            "Control y seguimiento de diabetes",
+            "Aplicación de inyecciones y vacunas"
+        ]
+    },
+    {
+        "name": "Ing. Roberto Díaz",
+        "role": "Arquitecto de Interiores",
+        "photoUrl": "https://i.pravatar.cc/300?img=11",
+        "whatsappNumber": "525512345678",
+        "services": [
+            "Diseño de planos arquitectónicos",
+            "Renderizado 3D fotorrealista",
+            "Asesoría en remodelaciones",
+            "Diseño de iluminación",
+            "Selección de mobiliario y acabados",
+            "Supervisión de obras civiles",
+            "Optimización de espacios pequeños"
+        ]
+    },
+    {
+        "name": "Lic. Sofia Torres",
+        "role": "Consultora de Marketing",
+        "photoUrl": "https://i.pravatar.cc/300?img=9",
+        "whatsappNumber": "34612345678",
+        "services": [
+            "Gestión de Redes Sociales",
+            "Campañas de Google Ads",
+            "Auditoría de marca personal",
+            "Creación de contenido viral",
+            "Estrategias de SEO Local",
+            "Email Marketing automatizado",
+            "Diseño de identidad corporativa"
+        ]
+    }
+]

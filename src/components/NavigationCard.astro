@@ -1,0 +1,29 @@
+---
+// src/components/NavigationCard.astro
+
+// Define las props que necesita el componente
+interface Props {
+  expertPost: any; // Usamos 'any' para simplificar la importación de tipado
+  isCurrent: boolean;
+}
+
+const { expertPost, isCurrent } = Astro.props;
+---
+
+<a href={`/posts/${expertPost.slug}`} class="block transition-transform duration-300">
+  <div class={`flex items-center space-x-4 p-3 rounded-lg border shadow-sm ${isCurrent ? 'bg-indigo-50 border-indigo-300 ring-2 ring-indigo-500' : 'bg-white border-gray-100 hover:shadow-md'}`}>
+    
+    {/* IMAGEN del experto */}
+    <img 
+      src={expertPost.data.photoUrl} 
+      alt={expertPost.data.name} 
+      class={`h-12 w-12 rounded-full object-cover flex-shrink-0 ${isCurrent ? 'border-2 border-indigo-500' : ''}`}
+    />
+    <div class="flex-grow min-w-0">
+      {/* NOMBRE */}
+      <p class="text-sm font-semibold text-gray-800 truncate">{expertPost.data.name}</p>
+      {/* PROFESIÓN */}
+      <p class={`text-xs uppercase truncate ${isCurrent ? 'text-indigo-700' : 'text-gray-500'}`}>{expertPost.data.role}</p>
+    </div>
+  </div>
+</a>

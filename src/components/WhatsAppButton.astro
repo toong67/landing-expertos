@@ -1,0 +1,33 @@
+---
+interface Props {    
+    phone: string | number; // Aceptamos tanto string como number por seguridad
+    label?: string;        
+    message?: string;    
+}
+
+// 1. Desestructuramos la propiedad 'phone' y le damos un alias 'rawPhone'
+const { phone: rawPhone, label = "Contactar", message = "" } = Astro.props;
+
+// 2. CONVERSIÓN EXPLÍCITA: Forzamos el valor a string. 
+//    Si rawPhone es undefined o null, se convierte en la cadena "undefined" o "null",
+//    por eso usamos String() y luego aseguramos que no sea vacío.
+const basePhone = String(rawPhone || ''); // Usamos String() para asegurar el tipo.
+
+// 3. Limpieza del número: Esto funcionará sin error, ya que 'basePhone' es un string.
+const cleanPhone = basePhone.replace(/\D/g, ''); 
+
+// 4. Codificación del mensaje para URL (si existe)
+const encodedMessage = message ? `?text=${encodeURIComponent(message)}` : '';
+
+// 5. Construcción del enlace final
+const whatsappUrl = `https://wa.me/${cleanPhone}${encodedMessage}`;
+---
+
+<a     
+    href={whatsappUrl}
+    target="_blank"     
+    rel="noopener noreferrer"
+    class="..."
+>
+    {label}
+</a>

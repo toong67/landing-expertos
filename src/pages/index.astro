@@ -1,0 +1,31 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Importamos los datos directamente desde el JSON
+import profiles from '../data/profiles.json';
+---
+
+<Layout title="Equipo de Profesionales">
+  <main class="min-h-screen bg-gray-50 py-20 px-4">
+    
+    <h1 class="text-center text-4xl font-bold text-gray-800 mb-12">Nuestros Expertos</h1>
+
+    <div class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+      
+      {
+        profiles.map((profile) => (
+          <Card 
+            name={profile.name}
+            role={profile.role}
+            photoUrl={profile.photoUrl}
+            whatsappNumber={profile.whatsappNumber}
+            services={profile.services}
+          />
+        ))
+      }
+
+    </div>
+
+  </main>
+</Layout>

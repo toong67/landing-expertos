@@ -1,0 +1,97 @@
+---
+// src/pages/posts/[...slug].astro
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro'; // ¡VERIFICA ESTA RUTA!
+import NavigationCard from '../../components/NavigationCard.astro'; 
+import WhatsAppButton from '../../components/WhatsAppButton.astro'; 
+
+// 1. getStaticPaths: Define las rutas.
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post:any) => ({
+    params: { slug: post.slug },
+    props: { post },             
+  }));
+}
+
+// Tipado y extracción
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props as Props; 
+const { Content } = await post.render(); // Contenido del Markdown
+
+// Datos completos del experto actual
+const { name, role, photoUrl, whatsappNumber, services } = post.data; 
+
+// 2. Obtener TODOS los posts para la navegación lateral
+const allPosts = await getCollection('posts');
+const navigationPosts = allPosts; 
+---
+
+<Layout title={`Perfil: ${name}`}>
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 pt-32">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            {/* Columna Principal (Ancha): Información y Contenido */}
+            <div class="lg:col-span-3">
+                
+                {/* Bloque de Información Superior del Experto (Foto y Contacto) */}
+                <div class="flex flex-col md:flex-row items-center md:items-start bg-white p-8 rounded-2xl shadow-xl border border-white/50 mb-10">
+                    <img 
+                      src={photoUrl} 
+                      alt={`Foto de ${name}`} 
+                      class="h-40 w-40 rounded-full object-cover border-4 border-white shadow-lg mx-auto md:mx-0 mb-4 md:mb-0 md:mr-8 flex-shrink-0"
+                    />
+                    <div class="text-center md:text-left flex-grow">
+                        <h1 class="text-4xl font-extrabold text-gray-900">{name}</h1>
+                        <p class="text-xl font-medium text-indigo-600 uppercase tracking-widest mb-4">{role}</p>
+                        
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2 mt-4 md:mt-0">Servicios Clave:</h3>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-700">
+                            {services.map((service: any) => (
+                                <li class="flex items-start">
+                                    <span class="mr-2 text-teal-400">•</span>
+                                    {service}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    
+                    {/* Botón de WhatsApp */}
+                    <div class="w-full md:w-auto mt-6 md:mt-0 md:ml-8 flex-shrink-0">
+                        <WhatsAppButton 
+                            phone={whatsappNumber} 
+                            label="Contactar por WhatsApp"
+                            message={`Hola ${name}, encontré tu perfil en ProTeam. Me gustaría saber más sobre tus servicios.`}
+                        />
+                    </div>
+                </div>
+                
+                {/* Contenido del Archivo Markdown (Presentación) */}
+                <div class="prose prose-indigo max-w-none text-gray-700 bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <Content />
+                </div>
+                
+            </div>
+
+            {/* Columna Lateral (Estrecha): Navegación de Otros Perfiles */}
+            <div class="lg:col-span-1 sticky top-32 h-max">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Ver Otros Perfiles</h3>
+                
+                <div class="space-y-3">
+                  {navigationPosts.map((expertPost: any) => (
+                      <NavigationCard 
+                        expertPost={expertPost} 
+                        isCurrent={expertPost.slug === post.slug} 
+                      />
+                  ))}
+                </div>
+                
+            </div>
+
+        </div>
+    </main>
+</Layout>
