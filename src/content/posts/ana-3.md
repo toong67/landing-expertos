@@ -1,7 +1,7 @@
 ---
 name: Dra. Carla Méndez
 role: Médico General
-photoUrl: https://i.pravatar.cc/300?img=5
+photoUrl: /doc-3.png
 whatsappNumber: 15554567555
 services: [
   "Consultas médicas generales",

@@ -2,7 +2,7 @@
     {
         "name": "Dra. Carla Méndez",
         "role": "Médico General",
-        "photoUrl": "https://i.pravatar.cc/300?img=5",
+        "photoUrl": "/doc-1.png",
         "whatsappNumber": "15554567555",
         "services": [
             "Consultas médicas generales",
@@ -15,9 +15,9 @@
         ]
     },
     {
-        "name": "Ing. Roberto Díaz",
+        "name": "Dra. Luisa Melendes",
         "role": "Arquitecto de Interiores",
-        "photoUrl": "https://i.pravatar.cc/300?img=11",
+        "photoUrl": "/doc-2.png",
         "whatsappNumber": "525512345678",
         "services": [
             "Diseño de planos arquitectónicos",
@@ -32,7 +32,7 @@
     {
         "name": "Lic. Sofia Torres",
         "role": "Consultora de Marketing",
-        "photoUrl": "https://i.pravatar.cc/300?img=9",
+        "photoUrl": "/doc-3.png",
         "whatsappNumber": "34612345678",
         "services": [
             "Gestión de Redes Sociales",
