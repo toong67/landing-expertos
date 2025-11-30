@@ -1,47 +1,53 @@
 [
     {
-        "name": "Dra. Carla Méndez",
+        "name": "Dra. Ana Barrera",
         "role": "Médico General",
-        "photoUrl": "/doc-1.png",
-        "whatsappNumber": "15554567555",
+        "photoUrl": "/mg1.png",
+        "whatsappNumber": "+584146309229",
         "services": [
-            "Consultas médicas generales",
-            "Control de hipertensión arterial",
-            "Certificados médicos viales",
-            "Suturas de heridas menores",
-            "Lavado de oídos",
-            "Control y seguimiento de diabetes",
-            "Aplicación de inyecciones y vacunas"
+            "Medicina General",
+            "Revisión  de exámenes de laboratorio",
+            "Récipe e informes médicos",
+            "Toma y retiro de puntos quirúrgicos",
+            "Postura y retiro de vía endovenosa, implante subdermico",
+            "Curas post quirúrgicas",
+            "Administración de medicamentos endovenosos e intramusculares",
+            "Electrocardiograma",
+            "Medición de tensión arterial"
         ]
     },
     {
-        "name": "Dra. Luisa Melendes",
-        "role": "Arquitecto de Interiores",
-        "photoUrl": "/doc-2.png",
-        "whatsappNumber": "525512345678",
+        "name": "Lca. Ana Carrillo",
+        "role": "Licenciada de salud",
+        "photoUrl": "/mg2.png",
+        "whatsappNumber": "+584147097295",
         "services": [
-            "Diseño de planos arquitectónicos",
-            "Renderizado 3D fotorrealista",
-            "Asesoría en remodelaciones",
-            "Diseño de iluminación",
-            "Selección de mobiliario y acabados",
-            "Supervisión de obras civiles",
-            "Optimización de espacios pequeños"
+            "Medicina General",
+            "Revisión  de exámenes de laboratorio",
+            "Récipe e informes médicos",
+            "Toma y retiro de puntos quirúrgicos",
+            "Postura y retiro de vía endovenosa, implante subdermico",
+            "Curas post quirúrgicas",
+            "Administración de medicamentos endovenosos e intramusculares",
+            "Medición de tensión arterial",
+            "Electrocardiograma"
         ]
     },
     {
-        "name": "Lic. Sofia Torres",
-        "role": "Consultora de Marketing",
-        "photoUrl": "/doc-3.png",
-        "whatsappNumber": "34612345678",
+        "name": "Dra. Ines",
+        "role": "Médico General",
+        "photoUrl": "/mg3.png",
+        "whatsappNumber": "+584146309229",
         "services": [
-            "Gestión de Redes Sociales",
-            "Campañas de Google Ads",
-            "Auditoría de marca personal",
-            "Creación de contenido viral",
-            "Estrategias de SEO Local",
-            "Email Marketing automatizado",
-            "Diseño de identidad corporativa"
+            "Medicina General",
+            "Récipe e informes médicos",
+            "Toma y retiro de puntos quirúrgicos",
+            "Postura y retiro de vía endovenosa, implante subdermico",
+            "Curas post quirúrgicas",
+            "Administración de medicamentos endovenosos e intramusculares",
+            "Electrocardiograma",
+            "Revisión  de exámenes de laboratorio",
+            "Medición de tensión arterial"
         ]
     }
 ]
