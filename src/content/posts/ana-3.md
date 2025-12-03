@@ -1,8 +1,9 @@
 ---
-name: Dra. Ines
+name: Dra. Ines Cordero
 role: Médico General
 photoUrl: /mg3.png
-whatsappNumber: +584146309229
+whatsappNumber: +584140072751
+
 services: [
  "Medicina General",
  "Récipe e informes médicos",

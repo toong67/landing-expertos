@@ -26,6 +26,7 @@ Mi misión primordial es ir más allá del tratamiento sintomático. Me especial
 Mi enfoque se basa en una medicina realmente participativa, centrada en la educación activa del paciente. Creo firmemente que el conocimiento es la herramienta más poderosa para que usted tome el control total de su bienestar. Utilizo una aproximación holística, lo que significa que evalúo a la persona en su totalidad: cuerpo, mente y entorno. Combino rigurosamente la ciencia médica moderna y las últimas guías de práctica clínica con una atención profundamente empática y humana.
 
 Si usted está buscando un control de salud integral, proactivo y a largo plazo, que incluya chequeos preventivos exhaustivos y un acompañamiento constante en sus metas de bienestar, me encantaría ser su aliada. Estoy aquí para escucharle, guiarle y cuidarle con el compromiso que su salud merece. Contácteme para agendar una consulta y comencemos juntos este camino.
+
 ---
 
 ## Mi Compromiso
